@@ -1,0 +1,69 @@
+{% extends "core/base.html" %}
+
+{% block title %}Rooms{% endblock title %}
+
+{% block content %}
+
+{% for r in rooms %}
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex {% cycle 'ms-auto' 'me-auto' %} rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">{{r.lema}}</span>
+                        <span class="section-heading-lower">{{r.nombre}}</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{r.imagen.url}}" alt="..." />
+            <div class="product-item-description d-flex {% cycle 'me-auto' 'ms-auto' %}">
+                <div class="bg-faded p-5 rounded"><p class="mb-0">{{r.descripcion}}</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+{% endblock content %}
+
+
+{% comment "secciones" %}
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Tranquil Oasis Amidst Nature</span>
+                        <span class="section-heading-lower">Garden View Suites</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'img/room2.jpeg' %}" alt="..." />
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0">Our Garden View Suites provide a serene escape surrounded by lush tropical gardens. These spacious suites offer a peaceful retreat for those seeking a connection with nature. Unwind on your private veranda, listen to the soothing sounds of the island, and let the beauty of Taha'a envelop you.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Unite in Paradise</span>
+                        <span class="section-heading-lower">Family Beachfront Villas</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'img/room3.jpg' %}" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0">Our Family Beachfront Villas are the perfect choice for those traveling with loved ones. Located steps away from the pristine beach, these villas offer a spacious and comfortable haven for your family. Share quality time on your private patio, watch the sunset over the horizon, and create cherished memories together.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endcomment %}

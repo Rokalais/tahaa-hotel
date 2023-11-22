@@ -1,0 +1,45 @@
+{% extends "core/base.html" %} {% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/intro.jpeg' %}" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Escape to</span>
+                    <span class="section-heading-lower">Taha'a paradise</span>
+                </h2>
+                <p class="mb-3">Discover paradise at Taha'a Hotel. Located on the enchanting island of Taha'a in French Polynesia, our tranquil resort invites you to experience the true essence of tropical bliss. With overwater bungalows, pristine beaches, and the fragrant allure of vanilla, your perfect Polynesian escape awaits. Come, find your piece of heaven at Taha'a Hotel.</p>
+                <div class="intro-button mx-auto">
+                    <button id="maintenance-button" class="btn btn-primary btn-xl">Visit Us Today!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Taha'a Hotel</span>
+                        <span class="section-heading-lower">Why</span>
+                    </h2>
+                    <p class="mb-0">Choose Taha'a Hotel for an unparalleled island retreat. Our commitment to excellence and the unique blend of luxury and authenticity set us apart. With attentive service, sumptuous dining, and the idyllic backdrop of Taha'a's natural beauty, we ensure your every need is met. Whether you're seeking a romantic getaway, a honeymoon haven, or an adventure-packed holiday, our resort provides the perfect balance of relaxation and excitement. Experience the Polynesian dream at Taha'a Hotel and create memories that will last a lifetime.</p>
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/logosawards.png' %}" alt="..." />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.getElementById("maintenance-button").addEventListener("click", function() {
+        alert("The platform is currently undergoing maintenance. Please contact us at our phone number 689-555-1234.");
+    });
+</script>
+{% endblock content %}

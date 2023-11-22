@@ -1,0 +1,59 @@
+{% extends "core/base.html" %} {% load static %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+
+<section class="page-section about-heading">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'img/about.jpeg' %}" alt="..." />
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Embrace Taha'a, Embrace Paradise</span>
+                            <span class="section-heading-lower">About us</span>
+                        </h2>
+                        <p>Celebrating the Essence of Taha'a: At Taha'a Hotel, we are dedicated to providing a genuine Polynesian experience. Nestled on the picturesque island of Taha'a in French Polynesia, our resort embodies the spirit of tropical serenity and adventure. From the lush vanilla orchards to the pristine shores, we invite you to explore the natural wonders and cultural richness of our island home.</p>
+                        <p class="mb-0">
+                            Whether you're savoring local flavors at our restaurants, indulging in rejuvenating spa treatments, or embarking on thrilling excursions, our commitment to excellence shines through every moment of your stay. Discover the heart and soul of Taha'a at Taha'a Hotel."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Come On In</span>
+                   
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218931.77418655055!2d-151.6516002727407!3d-16.627834065527207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bd82c2c10dd54b%3A0x21283a4c3d4b04ee!2sTahaa!5e0!3m2!1ses-419!2scl!4v1698470269141!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </h2>
+                 
+                    <p class="address mb-5">
+                        <em>
+                            <strong>123 Paradise Lane</strong>
+                            <br />
+                            Taha'a Island, French Polynesia 98765
+                        </em>
+                    </p>
+                    <p class="mb-0">
+                        <small><em>Call Anytime</em></small>
+                        <br />
+                        689-555-1234
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
