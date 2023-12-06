@@ -18,6 +18,7 @@ from django.urls import path
 from core import views as core_views
 from blog import views as blog_views
 from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',core_views.Home,name='inicio'),
@@ -28,11 +29,21 @@ urlpatterns = [
     
 ]
 
-if settings.DEBUG:
-    from django.conf.urls.static import static
-    urlpatterns += static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT
-        )
+urlpatterns += static(settings.STATIC_URL,
+    document_root=settings.STATIC_ROOT
+    )
+
+urlpatterns += static(settings.MEDIA_URL,
+    document_root=settings.MEDIA_ROOT
+    )
+
+
+
+# if settings.DEBUG:
+#     from django.conf.urls.static import static
+#     urlpatterns += static(
+#         settings.MEDIA_URL,
+#         document_root=settings.MEDIA_ROOT
+#         )
     
 
